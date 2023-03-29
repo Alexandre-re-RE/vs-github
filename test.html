@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        const applyTrad = () => {
+            let userLang = navigator.language || navigator.userLanguage;
+            let hello = document.getElementById("hello");
+
+            if (userLang == "fr") {
+                hello.innerHTML = "Bonjour"
+            } else {
+                hello.innerHTML = "Hello"
+            }
+        };
+        document.addEventListener("DOMContentLoaded", applyTrad);
+
+    </script>
 </head>
 <body>
     <body>
-        <h1>Bonjour</h1>
+        <h1 id="hello">Bonjour</h1>
     </body>
 </body>
 </html>
